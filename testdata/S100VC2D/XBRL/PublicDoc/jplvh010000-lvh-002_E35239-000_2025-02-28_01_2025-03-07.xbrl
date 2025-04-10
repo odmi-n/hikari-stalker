@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:iso4217="http://www.xbrl.org/2003/iso4217" xmlns:jpdei_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_cor" xmlns:jplvh010000-lvh_E35239-000="http://disclosure.edinet-fsa.go.jp/jplvh010000/lvh/002/E35239-000/2025-02-28/01/2025-03-07" xmlns:jplvh_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2014-07-31/jplvh_cor" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <link:schemaRef xlink:href="jplvh010000-lvh-002_E35239-000_2025-02-28_01_2025-03-07.xsd" xlink:type="simple"/>
+  <xbrli:context id="FilingDateInstant">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">E35239-000</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:instant>2025-03-07</xbrli:instant>
+		</xbrli:period>
+	</xbrli:context>
+  <xbrli:context id="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">
+		<xbrli:entity>
+			<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">E35239-000</xbrli:identifier>
+		</xbrli:entity>
+		<xbrli:period>
+			<xbrli:instant>2025-03-07</xbrli:instant>
+		</xbrli:period>
+		<xbrli:scenario>
+			<xbrldi:explicitMember dimension="jplvh_cor:FilersLargeVolumeHoldersAndJointHoldersAxis">jplvh010000-lvh_E35239-000:FilerLargeVolumeHolder1Member</xbrldi:explicitMember>
+		</xbrli:scenario>
+	</xbrli:context>
+  <xbrli:unit id="JPY">
+		<xbrli:measure>iso4217:JPY</xbrli:measure>
+	</xbrli:unit>
+  <xbrli:unit id="pure">
+		<xbrli:measure>xbrli:pure</xbrli:measure>
+	</xbrli:unit>
+  <xbrli:unit id="shares">
+		<xbrli:measure>xbrli:shares</xbrli:measure>
+	</xbrli:unit>
+  <jplvh_cor:TotalNumberOfFilersAndJointHoldersCoverPage contextRef="FilingDateInstant" decimals="0" unitRef="pure">1</jplvh_cor:TotalNumberOfFilersAndJointHoldersCoverPage>
+  <jpdei_cor:NumberOfSubmissionDEI contextRef="FilingDateInstant" decimals="0" unitRef="pure">1</jpdei_cor:NumberOfSubmissionDEI>
+  <jplvh_cor:StocksOrInvestmentSecuritiesEtcArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" decimals="0" unitRef="shares">150400</jplvh_cor:StocksOrInvestmentSecuritiesEtcArticle27233MainClause>
+  <jplvh_cor:StocksOrInvestmentSecuritiesEtcArticle27233Item1 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:StocksOrInvestmentSecuritiesEtcArticle27233Item2 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:SubscriptionRightsToSharesArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:SubscriptionRightsToSharesArticle27233Item2 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:ConvertibleBondsArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:ConvertibleBondsArticle27233Item2 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:TargetSecurityCoveredWarrantsArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:TargetSecurityCoveredWarrantsArticle27233Item1 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:TargetSecurityCoveredWarrantsArticle27233Item2 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:StockDepositoryReceiptsArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:StockDepositoryReceiptsArticle27233Item1 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:StockDepositoryReceiptsArticle27233Item2 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:StockRelatedDepositoryReceiptsArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:StockRelatedDepositoryReceiptsArticle27233Item1 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:StockRelatedDepositoryReceiptsArticle27233Item2 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:StockTrustBeneficiaryRightsArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:StockTrustBeneficiaryRightsArticle27233Item1 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:StockTrustBeneficiaryRightsArticle27233Item2 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:StockRelatedTrustBeneficiaryRightsArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:StockRelatedTrustBeneficiaryRightsArticle27233Item1 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:StockRelatedTrustBeneficiaryRightsArticle27233Item2 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:TargetSecurityRedeemableBondsArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:TargetSecurityRedeemableBondsArticle27233Item1 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:TargetSecurityRedeemableBondsArticle27233Item2 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:ExchangeableBondsArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:ExchangeableBondsArticle27233Item1 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:ExchangeableBondsArticle27233Item2 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:TotalArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" decimals="0" unitRef="shares">150400</jplvh_cor:TotalArticle27233MainClause>
+  <jplvh_cor:TotalArticle27233Item1 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:TotalArticle27233Item2 contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:NumberOfStocksEtcToDeductAsSoldOnMarginTrading contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:NumberOfStocksEtcToDeductAsRightsToDemandExistBetweenJointHolders contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:TotalNumberOfStocksEtcHeld contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" decimals="0" unitRef="shares">150400</jplvh_cor:TotalNumberOfStocksEtcHeld>
+  <jplvh_cor:NumberOfResidualStocksHeld contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="shares" xsi:nil="true"/>
+  <jplvh_cor:TotalNumberOfOutstandingStocksEtc contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" decimals="0" unitRef="shares">3000000</jplvh_cor:TotalNumberOfOutstandingStocksEtc>
+  <jplvh_cor:HoldingRatioOfShareCertificatesEtc contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" decimals="4" unitRef="pure">0.0501</jplvh_cor:HoldingRatioOfShareCertificatesEtc>
+  <jplvh_cor:HoldingRatioOfShareCertificatesEtcPerLastReport contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="pure" xsi:nil="true"/>
+  <jplvh_cor:AmountOfOwnFund contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" decimals="-3" unitRef="JPY">137831000</jplvh_cor:AmountOfOwnFund>
+  <jplvh_cor:TotalAmountOfBorrowings contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="JPY" xsi:nil="true"/>
+  <jplvh_cor:TotalAmountFromOtherSources contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" unitRef="JPY" xsi:nil="true"/>
+  <jplvh_cor:TotalAmountOfFundingForAcquisition contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" decimals="-3" unitRef="JPY">137831000</jplvh_cor:TotalAmountOfFundingForAcquisition>
+  <jplvh_cor:DocumentTitleCoverPage contextRef="FilingDateInstant">大量保有報告書</jplvh_cor:DocumentTitleCoverPage>
+  <jplvh_cor:ClauseOfStipulationCoverPage contextRef="FilingDateInstant">法第27条の23第1項</jplvh_cor:ClauseOfStipulationCoverPage>
+  <jplvh_cor:PlaceOfFilingCoverPage contextRef="FilingDateInstant">関東財務局長</jplvh_cor:PlaceOfFilingCoverPage>
+  <jplvh_cor:NameCoverPage contextRef="FilingDateInstant">光通信株式会社　代表取締役　髙橋 正人</jplvh_cor:NameCoverPage>
+  <jplvh_cor:ResidentialAddressOrAddressOfRegisteredHeadquarterCoverPage contextRef="FilingDateInstant">東京都豊島区西池袋一丁目4番10号</jplvh_cor:ResidentialAddressOrAddressOfRegisteredHeadquarterCoverPage>
+  <jplvh_cor:DateWhenFilingRequirementAroseCoverPage contextRef="FilingDateInstant">2025-02-28</jplvh_cor:DateWhenFilingRequirementAroseCoverPage>
+  <jplvh_cor:FilingDateCoverPage contextRef="FilingDateInstant">2025-03-07</jplvh_cor:FilingDateCoverPage>
+  <jplvh_cor:ArrangementOfFilingCoverPage contextRef="FilingDateInstant">その他</jplvh_cor:ArrangementOfFilingCoverPage>
+  <jplvh_cor:ReasonForFilingChangeReportCoverPage contextRef="FilingDateInstant">-</jplvh_cor:ReasonForFilingChangeReportCoverPage>
+  <jplvh_cor:ReasonForFilingChangeReportCoverPageNA contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:EDINETCodeDEI contextRef="FilingDateInstant">E35239</jpdei_cor:EDINETCodeDEI>
+  <jpdei_cor:FundCodeDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:SecurityCodeDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:FilerNameInJapaneseDEI contextRef="FilingDateInstant">光通信株式会社</jpdei_cor:FilerNameInJapaneseDEI>
+  <jpdei_cor:FilerNameInEnglishDEI contextRef="FilingDateInstant">Hikari Tsushin K.K.</jpdei_cor:FilerNameInEnglishDEI>
+  <jpdei_cor:FundNameInJapaneseDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:FundNameInEnglishDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CabinetOfficeOrdinanceDEI contextRef="FilingDateInstant">株券等の大量保有の状況の開示に関する内閣府令</jpdei_cor:CabinetOfficeOrdinanceDEI>
+  <jpdei_cor:DocumentTypeDEI contextRef="FilingDateInstant">第一号様式</jpdei_cor:DocumentTypeDEI>
+  <jpdei_cor:AccountingStandardsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:WhetherConsolidatedFinancialStatementsArePreparedDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:IndustryCodeWhenConsolidatedFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentPeriodEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:TypeOfCurrentPeriodDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentFiscalYearEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:PreviousFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:ComparativePeriodEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:PreviousFiscalYearEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:NextFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:EndDateOfQuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:AmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:AmendmentFlagDEI>
+  <jpdei_cor:IdentificationOfDocumentSubjectToAmendmentDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:ReportAmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:ReportAmendmentFlagDEI>
+  <jpdei_cor:XBRLAmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:XBRLAmendmentFlagDEI>
+  <jplvh_cor:EDINETCodeDEI contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">E35239</jplvh_cor:EDINETCodeDEI>
+  <jplvh_cor:SecurityCodeDEI contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:FilerNameInJapaneseDEI contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">光通信株式会社</jplvh_cor:FilerNameInJapaneseDEI>
+  <jplvh_cor:FilerNameInEnglishDEI contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">Hikari Tsushin K.K.</jplvh_cor:FilerNameInEnglishDEI>
+  <jplvh_cor:NameOfIssuer contextRef="FilingDateInstant">株式会社Faber Company</jplvh_cor:NameOfIssuer>
+  <jplvh_cor:SecurityCodeOfIssuer contextRef="FilingDateInstant">220A</jplvh_cor:SecurityCodeOfIssuer>
+  <jplvh_cor:ListedOrOTC contextRef="FilingDateInstant">上場</jplvh_cor:ListedOrOTC>
+  <jplvh_cor:StockListing contextRef="FilingDateInstant">東京証券取引所</jplvh_cor:StockListing>
+  <jplvh_cor:IndividualOrCorporation contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">法人(株式会社)</jplvh_cor:IndividualOrCorporation>
+  <jplvh_cor:Name contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">光通信株式会社</jplvh_cor:Name>
+  <jplvh_cor:ResidentialAddressOrAddressOfRegisteredHeadquarter contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">東京都豊島区西池袋一丁目4番10号</jplvh_cor:ResidentialAddressOrAddressOfRegisteredHeadquarter>
+  <jplvh_cor:FormerName contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:FormerResidentialAddressOrAddressOfRegisteredHeadquarter contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:DateOfBirth contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:Occupation contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:NameOfEmployer contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:AddressOfEmployer contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:DateOfEstablishment contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">2010-11-15</jplvh_cor:DateOfEstablishment>
+  <jplvh_cor:NameOfRepresentative contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">髙橋 正人</jplvh_cor:NameOfRepresentative>
+  <jplvh_cor:JobTitleOfRepresentative contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">代表取締役</jplvh_cor:JobTitleOfRepresentative>
+  <jplvh_cor:DescriptionOfBusiness contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">有価証券の保有管理</jplvh_cor:DescriptionOfBusiness>
+  <jplvh_cor:ContactInformationAndPerson contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">光通信株式会社　市川 容子</jplvh_cor:ContactInformationAndPerson>
+  <jplvh_cor:TelephoneNumber contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">03-5951-3746</jplvh_cor:TelephoneNumber>
+  <jplvh_cor:PurposeOfHolding contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">純投資</jplvh_cor:PurposeOfHolding>
+  <jplvh_cor:ActOfMakingImportantProposalEtc contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:ActOfMakingImportantProposalEtcNA contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:NotesNumberOfStocksEtcHeldTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:BaseDate contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">2025-02-28</jplvh_cor:BaseDate>
+  <jplvh_cor:NotesHoldingRatioOfShareCertificatesEtcTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysNATextBlock contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">
+&lt;h4&gt;（５）【当該株券等の発行者の発行する株券等に関する最近60日間の取得又は処分の状況】&lt;/h4&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td style="width:28mm;"&gt;年月日&lt;/td&gt;
+&lt;td class="COL_NOBR"&gt;株券等の種類&lt;/td&gt;
+&lt;td class="COL_NOBR"&gt;数量&lt;/td&gt;
+&lt;td class="COL_NOBR"&gt;割合&lt;/td&gt;
+&lt;td class="COL_NOBR"&gt;市場内外取引の別&lt;/td&gt;
+&lt;td class="COL_NOBR"&gt;取得又は処分の別&lt;/td&gt;
+&lt;td class="COL_NOBR"&gt;単価&lt;/td&gt;
+&lt;/tr&gt;&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000101"&gt;令和7年1月22日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000102"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000103"&gt;700&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000104"&gt;0.02&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000105"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000106"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000108"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000201"&gt;令和7年1月23日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000202"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000203"&gt;1,700&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000204"&gt;0.06&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000205"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000206"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000208"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000301"&gt;令和7年1月27日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000302"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000303"&gt;1,000&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000304"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000305"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000306"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000308"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000401"&gt;令和7年1月28日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000402"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000403"&gt;1,100&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000404"&gt;0.04&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000405"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000406"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000408"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000501"&gt;令和7年1月29日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000502"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000503"&gt;1,000&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000504"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000505"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000506"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000508"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000601"&gt;令和7年1月30日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000602"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000603"&gt;1,000&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000604"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000605"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000606"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000608"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000701"&gt;令和7年1月31日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000702"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000703"&gt;1,000&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000704"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000705"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000706"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000708"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000801"&gt;令和7年2月3日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000802"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000803"&gt;1,000&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000804"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000805"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000806"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000808"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000901"&gt;令和7年2月4日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000902"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000903"&gt;900&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000904"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000905"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050000906"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050000908"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001001"&gt;令和7年2月5日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001002"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001003"&gt;1,000&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001004"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001005"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001006"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001008"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001101"&gt;令和7年2月6日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001102"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001103"&gt;900&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001104"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001105"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001106"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001108"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001201"&gt;令和7年2月7日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001202"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001203"&gt;1,000&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001204"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001205"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001206"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001208"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001301"&gt;令和7年2月10日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001302"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001303"&gt;1,000&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001304"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001305"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001306"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001308"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001401"&gt;令和7年2月12日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001402"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001403"&gt;900&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001404"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001405"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001406"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001408"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001501"&gt;令和7年2月13日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001502"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001503"&gt;900&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001504"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001505"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001506"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001508"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001601"&gt;令和7年2月14日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001602"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001603"&gt;1,000&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001604"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001605"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001606"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001608"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001701"&gt;令和7年2月17日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001702"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001703"&gt;1,000&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001704"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001705"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001706"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001708"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001801"&gt;令和7年2月18日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001802"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001803"&gt;900&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001804"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001805"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001806"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001808"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001901"&gt;令和7年2月19日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001902"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001903"&gt;900&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001904"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001905"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050001906"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050001908"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002001"&gt;令和7年2月20日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002002"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002003"&gt;900&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002004"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002005"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002006"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002008"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002101"&gt;令和7年2月21日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002102"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002103"&gt;900&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002104"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002105"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002106"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002108"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002201"&gt;令和7年2月25日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002202"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002203"&gt;900&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002204"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002205"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002206"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002208"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002301"&gt;令和7年2月26日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002302"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002303"&gt;900&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002304"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002305"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002306"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002308"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002401"&gt;令和7年2月27日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002402"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002403"&gt;900&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002404"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002405"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002406"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002408"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002501"&gt;令和7年2月28日&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002502"&gt;普通株式&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002503"&gt;1,000&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002504"&gt;0.03&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002505"&gt;市場内&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201050002506"&gt;取得&lt;/span&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201050002508"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</jplvh_cor:DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock>
+  <jplvh_cor:SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsNA contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:BreakdownOfTotalAmountFromOtherSources contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:NotesFundingForAcquisitionOfStocksEtcHeldTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:BreakdownOfBorrowingsTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:BreakdownOfBorrowingsNATextBlock contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">
+&lt;h5&gt;②【借入金の内訳】&lt;/h5&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td class="COL_NOBR"&gt;名称（支店名）&lt;/td&gt;
+&lt;td class="COL_NOBR"&gt;業種&lt;/td&gt;
+&lt;td class="COL_NOBR"&gt;代表者氏名&lt;/td&gt;
+&lt;td class="COL_NOBR"&gt;所在地&lt;/td&gt;
+&lt;td class="COL_NOBR"&gt;
+&lt;div class="non_ml"&gt;借入&lt;/div&gt;
+&lt;div class="non_ml"&gt;目的&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="COL_NOBR"&gt;
+&lt;div class="non_ml"&gt;金額&lt;/div&gt;
+&lt;div class="non_ml"&gt;（千円）&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201070200101"/&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201070200102"/&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201070200103"/&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201070200104"/&gt;
+&lt;/td&gt;&lt;td&gt;
+&lt;span id="T0201070200105"/&gt;
+&lt;/td&gt;&lt;td class="COL_R"&gt;
+&lt;span id="T0201070200106"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</jplvh_cor:BreakdownOfBorrowingsNATextBlock>
+  <jplvh_cor:NamesEtcOfCreditorsTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:NamesEtcOfCreditorsNATextBlock contextRef="FilingDateInstant_jplvh010000-lvh_E35239-000FilerLargeVolumeHolder1Member">
+&lt;h5&gt;③【借入先の名称等】&lt;/h5&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td class="COL_NOBR"&gt;名称（支店名）&lt;/td&gt;
+&lt;td class="COL_NOBR"&gt;代表者氏名&lt;/td&gt;
+&lt;td class="COL_NOBR"&gt;所在地&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201070300101"/&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201070300102"/&gt;
+&lt;/td&gt;&lt;td class="COL_L"&gt;
+&lt;span id="T0201070300103"/&gt;
+&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</jplvh_cor:NamesEtcOfCreditorsNATextBlock>
+</xbrli:xbrl>

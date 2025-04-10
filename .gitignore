@@ -1,0 +1,11 @@
+.env
+/.venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.db
+.DS_Store
+edinet_downloads/
+processed_reports.json

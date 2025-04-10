@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://disclosure.edinet-fsa.go.jp/2013/manifest">
+	<tocComposition>
+		<title xml:lang="ja">提出本文書</title>
+		<title xml:lang="en">Main Document</title>
+		<item ref="jplvh010000" extrole="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1ReportOfLargeVolumeHolding" in="presentation"/>
+	</tocComposition>
+	<list>
+		<instance id="jplvh010000" type="PublicDoc" preferredFilename="jplvh010000-lvh-002_E35239-000_2025-02-28_01_2025-03-07.xbrl">
+			<ixbrl>0000000_header_jplvh010000-lvh-002_E35239-000_2025-02-28_01_2025-03-07_ixbrl.htm</ixbrl>
+			<ixbrl>0101010_honbun_jplvh010000-lvh-002_E35239-000_2025-02-28_01_2025-03-07_ixbrl.htm</ixbrl>
+		</instance>
+	</list>
+</manifest>

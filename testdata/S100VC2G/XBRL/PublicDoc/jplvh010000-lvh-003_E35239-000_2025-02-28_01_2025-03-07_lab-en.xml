@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" >
+	<link:labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+		<link:loc xlink:type="locator" xlink:label="FilerLargeVolumeHolder1Member" xlink:href="jplvh010000-lvh-003_E35239-000_2025-02-28_01_2025-03-07.xsd#jplvh010000-lvh_E35239-000_FilerLargeVolumeHolder1Member"/>
+		<link:label xlink:type="resource" xlink:label="label_FilerLargeVolumeHolder1Member" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Filer (large volume holder)-1</link:label>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="FilerLargeVolumeHolder1Member" xlink:to="label_FilerLargeVolumeHolder1Member"/>
+		<link:label xlink:type="resource" xlink:label="label_FilerLargeVolumeHolder1Member_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="en">Filer (large volume holder)-1 [member]</link:label>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="FilerLargeVolumeHolder1Member" xlink:to="label_FilerLargeVolumeHolder1Member_2"/>
+		<link:loc xlink:type="locator" xlink:label="FilerLargeVolumeHolder2Member" xlink:href="jplvh010000-lvh-003_E35239-000_2025-02-28_01_2025-03-07.xsd#jplvh010000-lvh_E35239-000_FilerLargeVolumeHolder2Member"/>
+		<link:label xlink:type="resource" xlink:label="label_FilerLargeVolumeHolder2Member" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Filer (large volume holder)-2</link:label>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="FilerLargeVolumeHolder2Member" xlink:to="label_FilerLargeVolumeHolder2Member"/>
+		<link:label xlink:type="resource" xlink:label="label_FilerLargeVolumeHolder2Member_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="en">Filer (large volume holder)-2 [member]</link:label>
+		<link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="FilerLargeVolumeHolder2Member" xlink:to="label_FilerLargeVolumeHolder2Member_2"/>
+	</link:labelLink>
+</link:linkbase>
