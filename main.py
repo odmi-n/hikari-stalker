@@ -3,9 +3,7 @@ from hikariget import fetch_reports
 from parser import parse_and_filter_reports
 from notifier import send_line_message
 from db import ReportDatabase
-
-# 定数設定（必要に応じてconfig.pyに分離）
-DOWNLOAD_DIR = "edinet_downloads"
+from config import DOWNLOAD_DIR  # configから設定を読み込む
 
 def check_database():
     """データベースの状態を確認"""

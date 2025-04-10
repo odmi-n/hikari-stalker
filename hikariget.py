@@ -8,7 +8,8 @@ import json
 import re
 from datetime import datetime
 from urllib.parse import urlparse, urljoin
-from parser import EdinetUnzipper  # 追加：パーサーのインポート
+from parser import EdinetUnzipper
+from config import EDINET_CODE, DOWNLOAD_DIR  # configから設定を使用
 from dotenv import load_dotenv
 
 # .envから環境変数を読み込む
@@ -63,9 +64,6 @@ def fetch_reports(date_str):
         return False
 
 class EdinetDownloader:
-    # 光通信のEDINETコード
-    KOTSU_EDINET_CODE = "E35239"
-    
     # EDINETの初期URLとAPI関連
     BASE_URL = "https://disclosure.edinet-fsa.go.jp"
     API_ENDPOINT_TEMPLATE = "{base_url}/api/v2/documents.json"
@@ -91,7 +89,7 @@ class EdinetDownloader:
         self.api_key = None  # APIキーを格納
         
         # 保存ディレクトリの作成
-        self.save_dir = os.path.join(os.getcwd(), "edinet_downloads")
+        self.save_dir = DOWNLOAD_DIR
         os.makedirs(self.save_dir, exist_ok=True)
         
         # デバッグ用のログディレクトリ
@@ -291,18 +289,14 @@ class EdinetDownloader:
             return []
     
     def filter_only_kotsu_documents(self, documents):
-        """光通信の書類だけを抽出（JSONファイル保存用）"""
-        kotsu_docs = []
-        
+        """対象の企業（光通信）に関連する書類のみをフィルタリング"""
+        filtered_docs = []
         for doc in documents:
-            edinetCode = doc.get("edinetCode", "")
-            filerName = doc.get("filerName", "")
-            
-            # 光通信の書類を検出
-            if edinetCode == self.KOTSU_EDINET_CODE or (filerName and "光通信" in filerName):
-                kotsu_docs.append(doc)
-        
-        return kotsu_docs
+            if doc.get('edinetCode') == EDINET_CODE:
+                filtered_docs.append(doc)
+                
+        logger.info(f"光通信関連書類: {len(filtered_docs)}件")
+        return filtered_docs
     
     def download_document(self, doc_id):
         """指定docIDの書類をZIPでダウンロード・解凍"""
@@ -386,7 +380,7 @@ class EdinetDownloader:
             is_kotsu = False
             
             # EDINETコードで判定
-            if edinetCode == self.KOTSU_EDINET_CODE:
+            if edinetCode == EDINET_CODE:
                 is_kotsu = True
                 logger.info(f"EDINETコードで光通信の書類を検出: {docDescription}")
             

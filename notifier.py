@@ -1,14 +1,7 @@
 from linebot import LineBotApi
 from linebot.models import TextSendMessage
 import os
-from dotenv import load_dotenv
-
-# .envから環境変数を読み込む
-load_dotenv()
-
-# 環境変数からトークンとユーザーIDを取得
-LINE_CHANNEL_ACCESS_TOKEN = os.getenv("LINE_CHANNEL_ACCESS_TOKEN")
-LINE_USER_ID = os.getenv("LINE_USER_ID")
+from config import LINE_CHANNEL_ACCESS_TOKEN, LINE_USER_ID  # configから設定を使用
 
 # Botの初期化
 line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
