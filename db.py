@@ -5,6 +5,20 @@ import logging
 from datetime import datetime
 from pathlib import Path
 
+# MySQL接続用のインポート（オプション）
+try:
+    import mysql.connector
+    MYSQL_AVAILABLE = True
+except ImportError:
+    MYSQL_AVAILABLE = False
+
+# .env ファイルから環境変数を読み込む（オプション）
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 # ロギングの設定
 logging.basicConfig(
     level=logging.INFO,
@@ -316,6 +330,290 @@ class ReportDatabase:
         except sqlite3.Error as e:
             logger.error(f"最新日付報告書取得中にエラー: {e}")
             return []
+
+
+# MySQL版のReportDatabaseクラス
+class MySQLReportDatabase:
+    def __init__(self, config=None):
+        """
+        MySQL データベース接続の初期化
+        Args:
+            config: MySQLの接続設定辞書。未指定の場合は環境変数から取得
+        """
+        if not MYSQL_AVAILABLE:
+            raise ImportError("mysql-connector-python パッケージがインストールされていません")
+        
+        # デフォルト設定（環境変数から取得）
+        self.config = config or {
+            'host': os.environ.get('MYSQLHOST', 'interchange.proxy.rlwy.net'),
+            'port': int(os.environ.get('MYSQLPORT', 3306)),
+            'user': os.environ.get('MYSQLUSER', 'root'),
+            'password': os.environ.get('MYSQLPASSWORD', 'TxoQDfJztZKuSREAmupOuZTCijlZFxFQ'),
+            'database': os.environ.get('MYSQLDATABASE', 'railway'),
+            'connection_timeout': 30,
+            'buffered': True
+        }
+        
+        self.conn = None
+        self.cursor = None
+        self.connect()
+        self.create_tables()
+    
+    def connect(self):
+        """データベースへの接続を確立"""
+        try:
+            self.conn = mysql.connector.connect(**self.config)
+            logger.info(f"MySQLデータベースに接続しました: {self.config['host']}:{self.config['port']}/{self.config['database']}")
+        except mysql.connector.Error as e:
+            logger.error(f"MySQLデータベース接続エラー: {e}")
+            raise
+    
+    def close(self):
+        """データベース接続を閉じる"""
+        if self.conn:
+            self.conn.close()
+            logger.info("MySQLデータベース接続を閉じました")
+    
+    def create_tables(self):
+        """必要なテーブルを作成"""
+        try:
+            cursor = self.conn.cursor()
+            
+            # 報告書テーブルの作成
+            cursor.execute('''
+            CREATE TABLE IF NOT EXISTS processed_reports (
+                report_id VARCHAR(255) PRIMARY KEY,
+                processed_at VARCHAR(255),
+                target_company VARCHAR(255),
+                security_code VARCHAR(50),
+                report_type VARCHAR(255),
+                holder_name VARCHAR(255),
+                report_date VARCHAR(255),
+                submission_date VARCHAR(255),
+                INDEX idx_security_code (security_code),
+                INDEX idx_holder_name (holder_name),
+                INDEX idx_report_type (report_type)
+            ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+            ''')
+            
+            self.conn.commit()
+            cursor.close()
+            logger.info("MySQLテーブルの作成が完了しました")
+        except mysql.connector.Error as e:
+            logger.error(f"MySQLテーブル作成エラー: {e}")
+            self.conn.rollback()
+            raise
+    
+    def is_already_processed(self, report_id):
+        """
+        報告書が既に処理済みかどうかを判定
+        Args:
+            report_id: 報告書ID
+        Returns:
+            bool: 処理済みかどうか
+        """
+        try:
+            cursor = self.conn.cursor(dictionary=True)
+            cursor.execute('SELECT 1 FROM processed_reports WHERE report_id = %s', (report_id,))
+            result = cursor.fetchone()
+            cursor.close()
+            return result is not None
+        except mysql.connector.Error as e:
+            logger.error(f"MySQL報告書チェック中にエラー: {e}")
+            return False
+    
+    def mark_as_processed(self, report_info):
+        """
+        報告書を処理済みとしてマーク
+        Args:
+            report_info: 報告書情報の辞書
+        Returns:
+            bool: 処理が成功したかどうか
+        """
+        try:
+            report_id = report_info.get('report_id')
+            if not report_id:
+                # report_idがない場合は、生成ロジックに従って作成
+                security_code = report_info.get('security_code', '')
+                submission_date = report_info.get('submission_date', '')
+                report_date = report_info.get('report_date', '')
+                report_type = report_info.get('report_type', '')
+                holder_name = report_info.get('holder_name', '')
+                
+                # 日本語の日付から数字のみを抽出
+                submission_numbers = ''.join(filter(str.isdigit, submission_date))
+                report_numbers = ''.join(filter(str.isdigit, report_date))
+                
+                report_id = f"{security_code}_{submission_numbers}_{report_numbers}_{report_type}_{holder_name}"
+            
+            # 処理日時
+            processed_at = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            
+            cursor = self.conn.cursor()
+            cursor.execute('''
+            INSERT INTO processed_reports 
+            (report_id, processed_at, target_company, security_code, 
+            report_type, holder_name, report_date, submission_date)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+            ON DUPLICATE KEY UPDATE
+            processed_at = VALUES(processed_at),
+            target_company = VALUES(target_company),
+            security_code = VALUES(security_code),
+            report_type = VALUES(report_type),
+            holder_name = VALUES(holder_name),
+            report_date = VALUES(report_date),
+            submission_date = VALUES(submission_date)
+            ''', (
+                report_id,
+                processed_at,
+                report_info.get('target_company', '不明'),
+                report_info.get('security_code', '不明'),
+                report_info.get('report_type', '不明'),
+                report_info.get('holder_name', '不明'),
+                report_info.get('report_date', '不明'),
+                report_info.get('submission_date', '不明')
+            ))
+            
+            self.conn.commit()
+            cursor.close()
+            logger.info(f"MySQL報告書 {report_id} を処理済みとして記録しました")
+            return True
+        
+        except mysql.connector.Error as e:
+            logger.error(f"MySQL報告書マーク中にエラー: {e}")
+            self.conn.rollback()
+            return False
+    
+    def get_all_processed_reports(self):
+        """
+        すべての処理済み報告書を取得
+        Returns:
+            list: 処理済み報告書のリスト
+        """
+        try:
+            cursor = self.conn.cursor(dictionary=True)
+            cursor.execute('SELECT * FROM processed_reports ORDER BY processed_at DESC')
+            rows = cursor.fetchall()
+            cursor.close()
+            return rows
+        except mysql.connector.Error as e:
+            logger.error(f"MySQL処理済み報告書取得中にエラー: {e}")
+            return []
+    
+    def search_reports(self, 
+                       security_code=None, 
+                       holder_name=None, 
+                       report_type=None,
+                       target_company=None,
+                       limit=100):
+        """
+        条件に一致する報告書を検索
+        Args:
+            security_code: 証券コード
+            holder_name: 保有者名
+            report_type: 報告書種類
+            target_company: 対象企業名
+            limit: 取得する最大件数
+        Returns:
+            list: 一致する報告書のリスト
+        """
+        try:
+            query = 'SELECT * FROM processed_reports WHERE 1=1'
+            params = []
+            
+            if security_code:
+                query += ' AND security_code = %s'
+                params.append(security_code)
+            
+            if holder_name:
+                query += ' AND holder_name LIKE %s'
+                params.append(f'%{holder_name}%')
+            
+            if report_type:
+                query += ' AND report_type = %s'
+                params.append(report_type)
+            
+            if target_company:
+                query += ' AND target_company LIKE %s'
+                params.append(f'%{target_company}%')
+            
+            query += ' ORDER BY processed_at DESC LIMIT %s'
+            params.append(limit)
+            
+            cursor = self.conn.cursor(dictionary=True)
+            cursor.execute(query, params)
+            rows = cursor.fetchall()
+            cursor.close()
+            return rows
+        
+        except mysql.connector.Error as e:
+            logger.error(f"MySQL報告書検索中にエラー: {e}")
+            return []
+    
+    def get_report_counts_by_type(self):
+        """
+        報告書種類ごとの件数を取得
+        Returns:
+            dict: 報告書種類と件数の辞書
+        """
+        try:
+            cursor = self.conn.cursor(dictionary=True)
+            cursor.execute('SELECT report_type, COUNT(*) as count FROM processed_reports GROUP BY report_type')
+            rows = cursor.fetchall()
+            cursor.close()
+            return {row['report_type']: row['count'] for row in rows}
+        except mysql.connector.Error as e:
+            logger.error(f"MySQL集計中にエラー: {e}")
+            return {}
+    
+    def get_latest_date_reports(self):
+        """
+        最新の日付に提出された報告書のみを取得
+        Returns:
+            list: 最新日付の報告書のリスト
+        """
+        try:
+            cursor = self.conn.cursor(dictionary=True)
+            
+            # まず最新の日付を取得
+            cursor.execute('SELECT MAX(submission_date) as latest_date FROM processed_reports')
+            result = cursor.fetchone()
+            latest_date = result['latest_date']
+            
+            if not latest_date:
+                logger.warning("データベースに報告書がありません")
+                cursor.close()
+                return []
+            
+            # 最新の日付にマッチする報告書を全て取得
+            cursor.execute('SELECT * FROM processed_reports WHERE submission_date = %s ORDER BY processed_at DESC', (latest_date,))
+            latest_reports = cursor.fetchall()
+            cursor.close()
+            
+            logger.info(f"最新日付 {latest_date} の報告書が {len(latest_reports)} 件見つかりました")
+            return latest_reports
+        except mysql.connector.Error as e:
+            logger.error(f"MySQL最新日付報告書取得中にエラー: {e}")
+            return []
+
+
+# 環境変数に基づいてデータベース選択
+def get_database():
+    """
+    環境に応じた適切なデータベースインスタンスを返す
+    Returns:
+        ReportDatabase または MySQLReportDatabase: データベースインスタンス
+    """
+    use_mysql = os.environ.get('USE_MYSQL', 'false').lower() == 'true'
+    
+    if use_mysql and MYSQL_AVAILABLE:
+        try:
+            return MySQLReportDatabase()
+        except Exception as e:
+            logger.error(f"MySQLデータベース初期化エラー: {e}、SQLiteにフォールバックします")
+    
+    return ReportDatabase()
+
 
 # 使用例
 if __name__ == "__main__":

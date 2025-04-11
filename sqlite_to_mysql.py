@@ -18,7 +18,7 @@ logger = logging.getLogger('sqlite_to_mysql')
 
 # MySQLの接続情報（Railway環境用）- 直接値を指定
 RAILWAY_MYSQL_CONFIG = {
-    'host': 'mysql.railway.internal',  # Railway内部で使用するホスト名
+    'host': 'interchange.proxy.rlwy.net',  # 外部接続用のホスト
     'port': 3306,
     'user': 'root',
     'password': 'TxoQDfJztZKuSREAmupOuZTCijlZFxFQ',
@@ -55,7 +55,14 @@ def get_mysql_connection(use_local=False):
     try:
         config = LOCAL_MYSQL_CONFIG if use_local else RAILWAY_MYSQL_CONFIG
         logger.info(f"接続設定: {config['host']}:{config['port']}/{config['database']}")
-        conn = mysql.connector.connect(**config)
+        
+        # 接続タイムアウトを設定（秒）
+        conn = mysql.connector.connect(
+            **config,
+            connection_timeout=30,  # 接続タイムアウト
+            buffered=True           # バッファ付きカーソル
+        )
+        
         logger.info(f"MySQLデータベースに接続しました: {config['host']}:{config['port']}/{config['database']}")
         return conn
     except mysql.connector.Error as e:
@@ -151,7 +158,13 @@ def migrate_data(use_local=False):
                 row_dict['submission_date']
             ))
             count += 1
+            
+            # 100件ごとにコミット
+            if count % 100 == 0:
+                mysql_conn.commit()
+                logger.info(f"{count}件処理済み...")
         
+        # 最終コミット
         mysql_conn.commit()
         logger.info(f"{count}件のレコードをMySQLにインポートしました")
         return count
