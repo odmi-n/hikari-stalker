@@ -289,6 +289,33 @@ class ReportDatabase:
         except sqlite3.Error as e:
             logger.error(f"集計中にエラー: {e}")
             return {}
+    
+    def get_latest_date_reports(self):
+        """
+        最新の日付に提出された報告書のみを取得
+        Returns:
+            list: 最新日付の報告書のリスト
+        """
+        try:
+            # まず最新の日付を取得
+            self.cursor.execute('SELECT MAX(submission_date) as latest_date FROM processed_reports')
+            result = self.cursor.fetchone()
+            latest_date = result['latest_date']
+            
+            if not latest_date:
+                logger.warning("データベースに報告書がありません")
+                return []
+            
+            # 最新の日付にマッチする報告書を全て取得
+            self.cursor.execute('SELECT * FROM processed_reports WHERE submission_date = ? ORDER BY processed_at DESC', (latest_date,))
+            rows = self.cursor.fetchall()
+            latest_reports = [dict(row) for row in rows]
+            
+            logger.info(f"最新日付 {latest_date} の報告書が {len(latest_reports)} 件見つかりました")
+            return latest_reports
+        except sqlite3.Error as e:
+            logger.error(f"最新日付報告書取得中にエラー: {e}")
+            return []
 
 # 使用例
 if __name__ == "__main__":
@@ -303,6 +330,17 @@ if __name__ == "__main__":
     report_counts = db.get_report_counts_by_type()
     for report_type, count in report_counts.items():
         print(f"{report_type}: {count}件")
+    
+    # 最新日付の報告書を取得（デバッグ用）
+    latest_reports = db.get_latest_date_reports()
+    print(f"\n最新日付の報告書: {len(latest_reports)}件")
+    if latest_reports:
+        print(f"最新日付: {latest_reports[0]['submission_date']}")
+        # サンプルとして最初の数件を表示
+        for i, report in enumerate(latest_reports[:3]):
+            print(f"{i+1}. {report['target_company']} ({report['security_code']}) - {report['report_type']}")
+        if len(latest_reports) > 3:
+            print(f"他 {len(latest_reports) - 3} 件...")
     
     # 接続を閉じる
     db.close() 
