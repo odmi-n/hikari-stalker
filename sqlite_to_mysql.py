@@ -18,7 +18,7 @@ logger = logging.getLogger('sqlite_to_mysql')
 
 # MySQLの接続情報（Railway環境用）- 直接値を指定
 RAILWAY_MYSQL_CONFIG = {
-    'host': 'interchange.proxy.rlwy.net',  # 直接指定
+    'host': 'mysql.railway.internal',  # Railway内部で使用するホスト名
     'port': 3306,
     'user': 'root',
     'password': 'TxoQDfJztZKuSREAmupOuZTCijlZFxFQ',
